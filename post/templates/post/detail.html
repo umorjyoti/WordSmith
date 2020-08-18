@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %}
+<div class="detail">
+
+
+<div class="title">
+  <h3>{{ post.title }}</h3>
+  <p>
+      <span class="oi oi-calendar"></span> {{ post.pubdate }}
+  </p>
+</div>
+  <div class="pstbody">
+    <div class="summarybdy">
+      <p>{{ post.body }}</p>
+    <div class="smith">  Smith ~ <i>{{ post.smith }}</i></div>
+    </div>
+    <div>
+      {% if user not in post.votes_total.all %}
+      <a href="javascript:{document.getElementById('upvote{{ pt.id }}').submit()}"
+        ><button class="btn">
+          <span class="oi oi-arrow-top"> </span> Upvote {{ post.votesTotal }}
+        </button></a
+      >
+      {% else %}
+      <button class="btn">
+        <span class="oi oi-arrow-top"> </span> Upvoted {{ post.votesTotal }}
+      </button>
+      {% endif %}
+      <div></div>
+    </div>
+  </div>
+</div>
+<form id="upvote" action="{% url 'upvote' post.id %}" method="POST">
+  {% csrf_token %}
+  <input type="hidden" />
+</form>
+
+
+{% endblock %}

@@ -1,3 +1,36 @@
-{% extends 'base.html' %} {% block content %}
-<h2>Welcome to InkSlinger</h2>
-{% endblock %}
+{% extends 'base.html' %} {% block content %} {% for pt in post.all %}
+<main class="margin">
+  <div class="homemain">
+    <div
+    onclick="window.location='{% url 'detail' pt.id %}';">
+      <h4 class="max">{{ pt.title }}</h4>
+      <br />
+      <p class="max">{{ pt.summary }} <br /><small class="see">see more</small></p>
+     <br><div class="fl"><i>~{{ pt.smith }}</i>
+        <small
+          ><span class="oi oi-calendar"></span> {{ pt.pubdate }}</small
+        >
+      </div>
+    </div>
+    <div class="inline">
+      {% if user not in pt.votes_total.all %}
+      <a href="javascript:{document.getElementById('upvote{{ pt.id }}').submit()}"
+        ><button class="btn">
+          <span class="oi oi-arrow-top"> </span> Upvote {{ pt.votesTotal }}
+        </button></a
+      >
+      {% else %}
+      <button class="btn">
+        <span class="oi oi-arrow-top"> </span> Upvoted {{ pt.votesTotal }}
+      </button>
+      {% endif %}
+
+    </div>
+  </div>
+
+  <form id="upvote{{ pt.id }}" action="{% url 'upvote' pt.id %}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" />
+  </form>
+</main>
+{% endfor%}<br><br><br><br><br><br><br><br><br><br><br> {% endblock %}

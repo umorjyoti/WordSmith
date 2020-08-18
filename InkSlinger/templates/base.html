@@ -14,44 +14,36 @@
     <link rel="stylesheet" href="{% static 'style.css' %}" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
+      href="{% static 'iconic/font/css/open-iconic-bootstrap.css' %}"
     />
 
-    <title>InkSlinger</title>
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <title>WordsSmith</title>
   </head>
 
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="{% url 'home' %}">
+    <header class="main-head">
+      <nav>
+          <a class="flex" href="{% url 'home' %}">
             <img
               src="{% static 'pen.svg' %}"
               class="d-inline-block align-top"
               height="25"
               width="25"
             />
-            InkSlinger
+            <p class="logo"> WordSmith</p>
           </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               {% if user.is_authenticated %}
-              <li class="nav-item">
-                <a
-                  class="nav-link"
+              <li>
+                <a class ="btn" href="{% url 'create' %}"
+
+                >Post</a>
+              </li>
+              <li>
+                <a class="btn"
+
                   href="javascript:{document.getElementById('logout').submit()}"
                   >Log Out</a
                 >
@@ -61,57 +53,31 @@
                 <input type="hidden" />
               </form>
               {% else %}
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+              <li>
+                <a class="btn" href="{% url 'signup' %}">Sign Up</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'login' %}">Log In</a>
+              <li>
+                <a class="btn" href="{% url 'login' %}">Log In</a>
               </li>
               {% endif %}
             </ul>
-          </div>
-        </div>
+
       </nav>
     </header>
 
-    <div class="container">
+    <div>
       {% block content %} {% endblock %}
     </div>
 
-    <footer class="text-muted">
-      <div class="container text-center">
-        <p>
-          &#169;Copyright Umorjyoti Chetia {% now "Y" %}
-        </p>
-      </div>
+    <footer>
+      <div class="footer-wrapper">
+      <h5>&#169;Copyright Umorjyoti Chetia {% now "Y" %}</h5>
+      <ul>
+        <li><a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/umotjyoti-chetia-207726156/"><img src="{% static 'linkedin.svg' %}" alt="LinkedIn-link"></a></li>
+        <li><a title="Email" href="mailto:umorjyotichetia@gmail.com"><img src="{% static 'email.svg' %}" alt="Email"></a></li>
+        <li><a title="Instagram" target="_blank" href="https://www.instagram.com/umorjyoti/"><img src="{% static 'insta.svg' %}" alt="instagram-link"></a></li>
+      </ul>
+    </div>
     </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      window.jQuery ||
-        document.write(
-          '<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>'
-        );
-    </script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
   </body>
 </html>

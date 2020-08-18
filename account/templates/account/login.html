@@ -1,12 +1,17 @@
 {% extends 'base.html' %} {% block content %}
-
-<h1>Log In</h1>
-<form action="{% url 'login'  %}" method="POST">
-  {% csrf_token %} Name :<br />
-  <input type="text" name="username" /><br />
-  Password :<br />
-  <input type="password" name="password" /><br />
-  {% if error %}<br />{{ error }}<br />{% endif %}<br />
-  <button type="submit" value="Log In" class="btn btn-primary">Log In</button>
-</form>
+{% load staticfiles %}
+<div class="loginbox">
+	<img src="{% static 'avatar.png' %}" class="avatar">
+	<h1>Login Here</h1>
+	<form action="{% url 'login'  %}" method="POST">
+  {% csrf_token %}
+	<p>Name<p/>
+	<input type="text" name="username">
+	<p>Password</p>
+	<input type="password" name="password"><br>
+  {% if error %}<br />{{ error }}<br />{% endif %}
+	<input type="submit" class="btn" value="Login"><br>
+	<a href="{% url 'signup' %}">New to WordSmith<a/>
+	</form>
+	</div>
 {% endblock %}

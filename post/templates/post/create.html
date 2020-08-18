@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %} {% block content %}
+{% load staticfiles %}
+<div class="signupbox">
+  <img src="{% static 'pen.svg' %}" class="penav">
+	<h1>Create Post</h1>
+	<form action="{% url 'create'  %}" method="POST">
+  {% csrf_token %}
+  <p>Title<p/>
+	<input type="text" name="title">
+	<p>Post<p/>
+	<textarea name="post" cols="34" rows="10"></textarea>
+  {% if error %}
+  <br />
+  {{ error }}<br />
+  {% endif %}
+	<input type="submit" class="btn" value="Post"><br>
+	</form>
+	</div>
+{% endblock %}

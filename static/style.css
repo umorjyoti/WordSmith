@@ -1,0 +1,301 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+  font-family: 'Frank Ruhl Libre', serif;
+  font-weight: 400;
+}
+ul{
+  list-style: none;
+}
+h1{
+  font-size: 2.6rem;
+}
+li{
+  padding: 1.5rem;
+  font-size: 1.7rem;
+}
+button,label,input,p{
+  font-size: 2rem;
+}
+h2{
+  font-size: 4.8rem;
+}
+h3{
+  font-size: 3rem;
+  font-weight: 400;
+}
+h4,h5{
+  font-size: 2.8rem;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+.main-head{
+  position: sticky;
+  top: 0%;
+  background:rgb(235, 216, 238);
+  color:rgb(10, 10, 9);
+}
+.logo{
+  font-family: 'Great Vibes', cursive;
+  padding-left: 1rem;
+  font-size: 2.5rem;
+}
+.flex{
+  display: flex;
+}
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  min-height: 8vh;
+}
+nav ul{
+  flex: 1 1 30rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+nav li .btn{
+  align-items: center;
+  font-size: 1.2rem;
+  background: none;
+  border: 1.3px solid #0a090a;
+  border-radius: 2rem;
+  color: #0a090a;
+  padding: 0.2rem 1.7rem;
+}
+footer{
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color:rgb(37, 38, 36);
+  background: rgb(235, 216, 238);
+}
+.footer-wrapper{
+  display: flex;
+  padding: 2rem;
+  width: 70%;
+  margin: auto;
+  align-items:center;
+  min-height: 5vh;
+  flex-wrap: wrap;
+
+}
+footer h5{
+  flex: 1 1 40rem;
+  font-size: 1.5rem;
+}
+footer ul{
+  display: flex;
+  list-style: none;
+  flex: 1 1 40rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+.margin{
+  padding-top: 2rem;
+}
+.homemain{
+  border: 1.2px solid rgb(235, 216, 238);
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex: 1 1 35rem;
+  width: 50%;
+  margin: auto;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+.fl{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  min-width: 27vw;
+  margin: auto;
+}
+.max{
+  width: 30vw;
+}
+.see{
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: rgb(64, 64, 63);
+}
+.homemain .btn{
+  font-size: 1.5rem;
+  background: rgb(176, 129, 184);
+  color: white;
+  padding: 1rem 2.4rem;
+  border-radius: 2.4rem;
+  border: none;
+  margin-right: 1rem;
+}
+.homemain h4{
+  font-size: 2.2rem;
+  color: rgb(22, 22, 23);
+}
+.homemain p{
+  font-size: 1.7rem;
+}
+.detail{
+  width: 50%;
+  margin:3rem auto;
+  padding: 1.5rem;
+
+  border-radius: 1rem;
+}
+.detail .btn{
+  font-size: 1.5rem;
+  background: rgb(176, 129, 184);
+  color: white;
+  padding: 1rem 2.4rem;
+  border-radius: 2.4rem;
+  border: none;
+  margin-right: 1rem;
+}
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 0rem 2rem 0rem;
+}
+.title h3{
+  font-size: 2.8rem;
+}
+.title p{
+  font-size: 1.5rem;
+}
+.pstbody{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 40rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.summarybdy{
+  width: 30vw;
+}
+.summarybdy p{
+  font-size: 1.9rem;
+}
+.summarybdy .smith{
+  font-size: 1.7rem;
+  padding-top:2rem;
+}
+.loginbox{
+		width:320px;
+		height:380px;
+		background:rgb(235, 216, 238);
+		color:black;
+		top:320px;
+		left:50%;
+		position:absolute;
+		transform:translate(-50%,-50%);
+		box-sizing:border-box;
+
+		padding:100px 30px;
+
+	}
+	.avatar{
+		width:100px;
+		height:100px;
+		position:absolute;
+		top:5px;
+		left: calc(50% - 50px);
+	}
+	h1{
+		margin:0;
+		padding:0 0 20px;
+		text-align:center;
+		font-size:20px;
+
+	}
+	.loginbox p{
+		font-size: 18px;
+	}
+	.loginbox input{
+		width:100%;
+		margin-bottom:20px;
+	}
+	.loginbox input[type="text"],input[type="password"],input[type="email"]{
+		border:none;
+    border-radius: 1.5px;
+		border-bottom:1px solid #141414;
+    background: tranparent;
+	}
+  .loginbox .btn{
+    font-size: 1.5rem;
+    background: rgb(176, 129, 184);
+    color: white;
+    padding: 1rem 2.4rem;
+    border-radius: 1.4rem;
+    border: none;
+    margin-right: 0.7rem;
+  }
+  .signupbox{
+      margin-top: 20px;
+  		width:320px;
+  		height:480px;
+  		background:rgb(235, 216, 238);
+  		color:black;
+  		top:320px;
+  		left:50%;
+  		position:absolute;
+  		transform:translate(-50%,-50%);
+  		box-sizing:border-box;
+
+  		padding:100px 30px;
+
+  	}
+  	.avatar{
+  		width:100px;
+  		height:100px;
+  		position:absolute;
+  		top:5px;
+  		left: calc(50% - 50px);
+  	}
+  	h1{
+  		margin:0;
+  		padding:0 0 20px;
+  		text-align:center;
+  		font-size:20px;
+
+  	}
+  	.signupbox p{
+  		font-size: 18px;
+  	}
+  	.signupbox input{
+  		width:100%;
+  		margin-bottom:20px;
+  	}
+  	.signupbox input[type="text"],input[type="password"]{
+  		border:none;
+      border-radius: 1.5px;
+  		border-bottom:1px solid #141414;
+      background: tranparent;
+  	}
+    .signupbox .btn{
+      font-size: 1.5rem;
+      background: rgb(176, 129, 184);
+      color: white;
+      padding: 1rem 2.4rem;
+      border-radius: 1.4rem;
+      border: none;
+      margin-right: 0.7rem;
+    }
+textarea{
+  resize: none;
+
+}
