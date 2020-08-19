@@ -50,6 +50,7 @@ a{
   display: flex;
 }
 nav{
+  z-index: 10;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -74,6 +75,7 @@ nav li .btn{
   color: #0a090a;
   padding: 0.2rem 1.7rem;
 }
+
 footer{
   position:fixed;
   bottom: 0;
@@ -90,6 +92,7 @@ footer{
   align-items:center;
   min-height: 5vh;
   flex-wrap: wrap;
+  flex: 1 1 40rem;
 
 }
 footer h5{
@@ -309,4 +312,58 @@ footer ul{
   position:absolute;
   top:25px;
   left: calc(50% - 30px);
+}
+@media screen and (max-width:1012px){
+  html{
+    font-size: 45%;
+  }
+  .homemain{
+    width: 70%;
+  }
+  h5{
+    text-align: center;
+  }
+  .detail{
+    width: 70%;
+  }
+  footer ul{
+    justify-content:center;
+  }
+}
+@media screen and (max-width:470px){
+  html{
+    font-size: 30%;
+  }
+  h5{
+    text-align: center;
+  }
+  .flex{
+    margin:0 auto 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul,footer ul{
+    justify-content:center;
+  }
+  .homemain{
+    display: flex;
+    flex: 3 1 35rem;
+    width: 90%;
+  }
+  .fl{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    min-width: 47vw;
+    margin: auto;
+  }
+  .max{
+    width: 40vw;
+  }
+  .detail{
+    width: 90%;
+  }
+  .summarybdy{
+    width: 70%;
+  }
 }

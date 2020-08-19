@@ -8,8 +8,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="WordSmith is a social media site that was developed specifically for the writer community. ">
+    <meta name="robots" content="base, follow">
     <link rel="icon" href="{% static 'pen.svg' %}" />
     <link rel="stylesheet" href="{% static 'style.css' %}" />
     <link
@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 
     <title>WordsSmith</title>
+
   </head>
 
   <body>
@@ -59,10 +60,13 @@
               <li>
                 <a class="btn" href="{% url 'login' %}">Log In</a>
               </li>
-              {% endif %}
+
             </ul>
 
+
+
       </nav>
+      {% endif %}
     </header>
 
     <div>

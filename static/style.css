@@ -50,6 +50,7 @@ a{
   display: flex;
 }
 nav{
+  z-index: 10;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -74,6 +75,7 @@ nav li .btn{
   color: #0a090a;
   padding: 0.2rem 1.7rem;
 }
+
 footer{
   position:fixed;
   bottom: 0;
@@ -247,7 +249,7 @@ footer ul{
   .signupbox{
       margin-top: 20px;
   		width:320px;
-  		height:480px;
+  		height:520px;
   		background:rgb(235, 216, 238);
   		color:black;
   		top:320px;
@@ -295,7 +297,18 @@ footer ul{
       border: none;
       margin-right: 0.7rem;
     }
-textarea{
+.signupbox textarea{
   resize: none;
-
+  border:none;
+  border-radius: 1.5px;
+  border-bottom:1px solid #141414;
+  background: tranparent;
+  margin-bottom: 20px;
+}
+.penav{
+  width:50px;
+  height:50px;
+  position:absolute;
+  top:25px;
+  left: calc(50% - 30px);
 }

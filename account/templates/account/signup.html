@@ -1,9 +1,18 @@
 {% extends 'base.html' %} {% block content %}
 
 {% load staticfiles %}
-<div class="signupbox">
+<style>
+.signupbox .msg{
+	font-size:1.2rem;
+	color:rgb(69, 70, 68);
+	padding:0px;
+}
+</style>
+<div class="signupbox height">
+	<h1 class="msg">Grab your pen name and start posting.</h1>
 	<img src="{% static 'avatar.png' %}" class="avatar">
 	<h1>Sign Up</h1>
+
 	<form action="{% url 'signup'  %}" method="POST">
   {% csrf_token %}
   <p>Email<p/>
@@ -14,8 +23,8 @@
 	<input type="password" name="pass1">
   <p>Confirm Password</p>
   <input type="password" name="pass2" />
-  {% if error %}<br />{{ error }}<br />{% endif %}
 	<input type="submit" class="btn" value="Sign Up"><br>
 	</form>
+	{% if error %}<br />{{ error }}<br />{% endif %}
 	</div>
 {% endblock %}

@@ -34,4 +34,4 @@ def upvote(request,post_id):
         post=get_object_or_404(Post,pk=post_id)
         post.votes_total.add(request.user)
         post.save()
-        return redirect('/post/' + str(post.id))
+        return redirect('home')
