@@ -318,7 +318,7 @@ footer ul{
     font-size: 45%;
   }
   .homemain{
-    width: 70%;
+    width: 90%;
   }
   h5{
     text-align: center;
@@ -332,7 +332,7 @@ footer ul{
 }
 @media screen and (max-width:470px){
   html{
-    font-size: 30%;
+    font-size: 20%;
   }
   h5{
     text-align: center;
@@ -358,12 +358,17 @@ footer ul{
     margin: auto;
   }
   .max{
-    width: 40vw;
+    width: 30vw;
   }
   .detail{
     width: 90%;
   }
   .summarybdy{
     width: 70%;
+  }
+}
+@media screen and (max-width:230px){
+  html{
+    font-size: 20%;
   }
 }
