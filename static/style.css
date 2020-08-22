@@ -192,6 +192,7 @@ footer ul{
 }
 .summarybdy p{
   font-size: 1.9rem;
+  white-space: pre-line;
 }
 .summarybdy .smith{
   font-size: 1.7rem;
@@ -305,6 +306,7 @@ footer ul{
   border-bottom:1px solid #141414;
   background: tranparent;
   margin-bottom: 20px;
+  white-space: pre-line;
 }
 .penav{
   width:50px;
@@ -332,7 +334,7 @@ footer ul{
 }
 @media screen and (max-width:470px){
   html{
-    font-size: 20%;
+    font-size: 35%;
   }
   h5{
     text-align: center;
@@ -358,17 +360,12 @@ footer ul{
     margin: auto;
   }
   .max{
-    width: 30vw;
+    width: 55vw;
   }
   .detail{
     width: 90%;
   }
   .summarybdy{
     width: 70%;
-  }
-}
-@media screen and (max-width:230px){
-  html{
-    font-size: 20%;
   }
 }
