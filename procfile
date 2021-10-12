@@ -1,1 +1,1 @@
-web: gunicorn InkSlinger.wsgi --log-file -
+web: gunicorn InkSlinger.wsgi
