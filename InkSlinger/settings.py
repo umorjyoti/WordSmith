@@ -25,7 +25,7 @@ SECRET_KEY = 'l2(6#03dpa#uz0d=v7$txd2)*((sc%e(&00$(s@uu5u=8chs9#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','https://wordmith.herokuapp.com/']
 
 
 # Application definition
